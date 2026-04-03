@@ -1,5 +1,5 @@
 let preview = false;
-let namaTamu = "DEKEKU";
+let namaTamu = "Arto Printing";
 let data = {};
   // nama Tamu
   function getParams(name) {
