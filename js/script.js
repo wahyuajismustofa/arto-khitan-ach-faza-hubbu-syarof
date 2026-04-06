@@ -229,7 +229,6 @@ function loadMoreDoa(container, isRowBased) {
   const html = slice.map((item, index) => {
     const nama = item.nama || "Tamu";
     const pesan = item.doa || "-";
-    console.log(item.waktu);
     const date = new Date(item.waktu);
     const formatted = date.toLocaleString("id-ID", {
             weekday: "long",
