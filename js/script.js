@@ -223,12 +223,25 @@ async function renderDoaCards(data) {
   }
 }
 
+
 function loadMoreDoa(container, isRowBased) {
   const slice = allDoaData.slice(displayedCount, displayedCount + perPage);
   const html = slice.map((item, index) => {
     const nama = item.nama || "Tamu";
     const pesan = item.doa || "-";
-    const waktu = item.waktu || "-";
+    console.log(item.waktu);
+    const date = new Date(item.waktu);
+    const formatted = date.toLocaleString("id-ID", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            timeZone: "Asia/Jakarta"
+          });
+    const waktu = formatted;
     const kehadiran = item.kehadiran || "Tidak diketahui";
 
     const labelClass = kehadiran.toLowerCase().includes("hadir")
