@@ -227,7 +227,7 @@ function loadMoreDoa(container, isRowBased) {
   const slice = allDoaData.slice(displayedCount, displayedCount + perPage);
   const html = slice.map((item, index) => {
     const nama = item.nama || "Tamu";
-    const pesan = item.pesan || "-";
+    const pesan = item.doa || "-";
     const waktu = item.waktu || "-";
     const kehadiran = item.kehadiran || "Tidak diketahui";
 
