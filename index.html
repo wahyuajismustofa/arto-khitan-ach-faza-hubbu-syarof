@@ -81,12 +81,12 @@
        <small class="text-light">
         Untuk
        </small>
-       <h5 class="my-2 text-light e-nama">
+       <h5 class="my-2 text-light e-nama data-nama">
         namatamu
        </h5>
       </div>
       <div class="btn-undangan">
-       <a class="btn btn-primary mt-4" href="#profil" onclick="music();">
+       <a class="btn btn-primary mt-4" href="#profil" onclick="music();" id="startToExplore">
         <i class="fas fa-envelope mr-2">
         </i>
         Buka Undangan
@@ -281,7 +281,7 @@ Jika Anda ingin menyampaikan ucapan secara langsung, silakan tulis melalui form 
       </div>
      </div>
      <div class="card card-body mt-4">
-      <form autocomplete="off" id="form-doa">
+      <form autocomplete="off" id="weddingWishForm" >
        <div class="form-group" data-aos="fade-up" data-aos-duration="2000">
         <textarea class="form-control" cols="30" id="input-doa" name="doa" placeholder="Tuliskan ucapan atau doa untuk  pemilik acara" rows="6"></textarea>
        </div>
@@ -415,7 +415,9 @@ Jika Anda ingin menyampaikan ucapan secara langsung, silakan tulis melalui form 
  }, 1000);
   </script>
   <script>
-   window.bank = [
+  window.dekeku_tmp = {};
+    window.dekeku_tmp.sellerId = 2;
+  window.bank = [
     {
       "bank": "Dana",
       "atas_nama": "Richanil Jannah",
@@ -423,6 +425,18 @@ Jika Anda ingin menyampaikan ucapan secara langsung, silakan tulis melalui form 
       "gambar": "https://ik.imagekit.io/mustofa/web/khitan/e-wallet-dana.webp"
     }
   ];
+
   </script>
+  <script type="module">
+   import { dekeku, init } from "https://cdn.jsdelivr.net/gh/wahyuajismustofa/dekeku-undangan@eee46d0caa7c4fdc806c924b17b114b1b2dbfaef/assets/js/undangan-dekeku.js";
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        dekeku.prosesJs = dekeku.prosesJs || 0;
+        dekeku.prosesJs += 1;
+        await init();
+        dekeku.prosesJs -= 1;
+        dekeku.proxy.saveDekeku.value = true;
+    });
+  </script>  
  </body>
 </html>
