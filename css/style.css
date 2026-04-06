@@ -109,7 +109,7 @@ div#embedYT {
     overflow: hidden;
     text-align: center;
     z-index: 999999999;
-    color: var(--primary-clr);
+    color: #f9f9f9;
     padding: 0 40px 0 20px;
     opacity: 0;
     visibility: hidden;
@@ -127,16 +127,16 @@ div#embedYT {
 }
 
 .alert.success {
-    background: var(--success-clr);
-    color: var(--white-clr);
+    background: #28a745;
+    color: #ffffff;
 }
 .alert.error {
-    background: var(--error-clr);
-    color: var(--white-clr);
+    background: #dc3545;
+    color: #ffffff;
 }
 .alert.info {
     background: #3267E3;
-    color: var(--white-clr);
+    color: #ffffff;
 }
 
 .alert-text {
