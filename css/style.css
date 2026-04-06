@@ -118,12 +118,12 @@ div#embedYT {
 
 .alert.show {
     opacity: 1;
-    visibility: visible;
+    visibility: visible !important;
 }
 
 .alert.hide {
     opacity: 0;
-    visibility: hidden;
+    visibility: hidden !important;
 }
 
 .alert.success {
